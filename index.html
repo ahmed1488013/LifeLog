@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeLog - Daily Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>LifeLog</h1>
+        <p>Track your thoughts, moments, and experiences every day.</p>
+    </header>
+
+    <div class="container">
+        <section class="entry-form-section">
+            <h2>Create New Entry</h2>
+            <form id="entryForm" class="entry-form">
+                <input type="text" id="entryTitle" class="entry-title" placeholder="Title of Your Entry" required />
+                <textarea id="entryText" class="entry-text" placeholder="Write your entry here..." rows="5" required></textarea>
+                <div class="form-footer">
+                    <label for="category">Category:</label>
+                    <select id="category" class="category-select">
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="Health">Health</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <button type="submit" class="save-button">Save Entry</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="entry-list-section">
+            <h2>Past Entries</h2>
+            <div class="calendar-view">
+                <input type="date" id="entryDate" class="calendar-input" />
+                <button class="show-calendar">Show Entries</button>
+            </div>
+            <ul id="entryList" class="entry-list"></ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 LifeLog. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
